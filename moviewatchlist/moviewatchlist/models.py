@@ -9,4 +9,6 @@ class Register(models.Model):
     class Meta:
         db_table="user"
 
-
+class Login(models.Model):
+    email=models.CharField(max_length=100)  
+    password=models.CharField(max_length=10)
