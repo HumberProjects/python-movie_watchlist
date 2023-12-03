@@ -22,6 +22,7 @@ from moviewatchlist.views import contact
 from moviewatchlist.views import movies
 from moviewatchlist.views import login
 from moviewatchlist.views import register
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,5 +31,5 @@ urlpatterns = [
     path('contact.html', contact),      
     path('blog.html', movies), 
     path('login.html', login),    
-    path('register.html', register),    
+    path('register', views.registerUser),    
 ]

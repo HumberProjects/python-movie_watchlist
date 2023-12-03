@@ -29,18 +29,20 @@
 </section>
 
 <section id="contact" class="pt-4 pb-4 bg_grey">
+	<form method="POST">
+        {% csrf_token %}
  <div class="container-xl">
   <div class="row contact_2 mt-4">
    <div class="col-md-9">
 	<div class="contact_2l1 mt-3 row">
 	 <div class="col-md-6">
 	  <div class="contact_2l1i">
-	    <input class="form-control" placeholder="Name*" type="text">
+	    <input class="form-control" placeholder="Name*" name="name" type="text">
 	  </div>
 	 </div> 
 	 <div class="col-md-6">
 	  <div class="contact_2l1i">
-	    <input class="form-control" placeholder="Email*" type="text">
+	    <input class="form-control" placeholder="Email*" name="email" type="text">
 	  </div>
 	 </div>
 	 
@@ -48,12 +50,12 @@
 	<div class="contact_2l1 mt-3 row">
 	 <div class="col-md-6">
 	  <div class="contact_2l1i">
-	    <input class="form-control" placeholder="Contact Number*" type="text">
+	    <input class="form-control" placeholder="Contact Number*" name="contact_number" type="text">
 	  </div>
 	 </div> 
 	 <div class="col-md-6">
 	  <div class="contact_2l1i">
-	    <input class="form-control" placeholder="Passoword*" type="text">
+	    <input class="form-control" placeholder="Passoword*" type="text" name="password">
 	  </div>
 	 </div>
 	 
@@ -61,13 +63,14 @@
 	<div class="contact_2l1 mt-3 row">
 	 <div class="col-md-12">
 	  <div class="contact_2l1i">
-	  		<h6 class="mt-3 mb-0"><a class="button" href="#"> Register</a></h6>
+	  		<h6 class="mt-3 mb-0"><input type="submit" class="btn btn-primary mb-2" value="Register"></h6>			 
 	  </div>
 	 </div> 
 	</div>
    </div>
   </div>
  </div>
+</form>
 </section>
 
 
@@ -75,7 +78,7 @@
 	{% include 'footer.html' %}
 </section>
 
-<script>
+{% comment %} <script>
 window.onscroll = function() {myFunction()};
 
 var navbar_sticky = document.getElementById("navbar_sticky");
@@ -91,7 +94,7 @@ function myFunction() {
 	document.body.style.paddingTop = '0'
   }
 }
-</script>
+</script> {% endcomment %}
 
 </body>
 
