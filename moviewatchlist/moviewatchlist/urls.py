@@ -30,6 +30,8 @@ urlpatterns = [
     path('about.html', aboutus),
     path('contact.html', contact),      
     path('blog.html', movies), 
-    path('login.html', login),    
-    path('register', views.registerUser),    
+    path('login.html', views.loginUser),    
+    path('register', views.registerUser),  
+    path('addmovie', views.addNewMovie),  
+    path('category', views.addNewCategory),    
 ]
